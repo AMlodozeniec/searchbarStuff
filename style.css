@@ -1,0 +1,288 @@
+
+body {
+/*  background: -webkit-linear-gradient(#99DAD2, #FEECA4);
+  background: linear-gradient(#99DAD2, #FEECA4);*/
+  background-image: url("../assets/gradient.png");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  font-family: arial;
+  max-width: none;
+}
+
+#top {
+  position: absolute;
+  top: 0;
+  margin-top: -10px;
+  margin-right:-10px;
+  margin-left:-10px;
+  height: 40px;
+  width: 100%;
+  background: linear-gradient(to right,#FEE12B, #1CA883);
+  background: -webkit-linear-gradient(to right, #FEE12B, #1CA883);
+} 
+
+#top p {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+#top a {
+  color: white;
+  font-weight: 100;
+  font-style: italic;
+  text-decoration: none; 
+}
+
+#login-button {
+  position: relative;
+  top: 15px;
+  right: 5px;
+  padding: 3px;
+  border: solid #ffffff 1px;
+  letter-spacing: 0.1em;
+  color: white;
+  font-weight: 100;
+  font-style: italic;
+  text-decoration: none;
+}
+
+header#banner {
+  width: 100%;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 999;
+  top: 0px;
+  background-image: url(../assets/gradient.png);
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  background-color: #FFFFFF;
+  position: fixed;
+}
+
+nav {
+  margin-top: 30px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 200px;
+  background: transparent;
+}
+
+
+nav h1 {
+  text-align: center;
+  color: white;
+  font-size: 4em;
+  margin: 0; 
+  font-weight: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-top: 5;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+nav ul li {
+  display: inline;
+  padding: 13px;
+  letter-spacing: 0.02em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #F8AB3F;
+}
+
+#search {
+  margin-top: 105px;
+  margin-right: 20px;
+}
+
+input[type="text"] {
+  width: 200px;
+  background-color: transparent;
+  color: white;
+  border-style: none;
+  border-bottom: solid 1px #ffffff;
+  font-size: 16px;
+  height: 20px;
+
+}
+
+.hidden-submit {
+    border: 0 none;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+input:focus{
+    outline: none;
+}
+
+/* Placeholder Text x-Browser */
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #ffffff;
+  font-size: 16px;
+
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #ffffff;
+   opacity: 1;
+   font-size: 16px;
+
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #ffffff;
+  opacity: 1;
+  font-size: 16px;
+
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ffffff;
+  font-size: 16px;
+
+}
+
+#togglebar {
+  background: transparent; 
+  top: 270px;
+  width: 45px;
+  height: 150px;
+  border: solid #ffffff 10px;
+}   
+
+#togglebar ul {
+  list-style-type: none;
+  position:relative;
+  bottom: 8px;
+}
+
+
+#introTag {
+  width: 83%;
+  margin-top: 250px;
+  overflow: auto;
+}
+
+#introTag h1 {
+  font-size: 4.1em;
+  color: white;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+}
+
+#introTag button {
+
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 60px;
+  background: transparent;
+  padding: 5px 10px 5px 10px;
+  border: solid #ffffff 10px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+#introTag button:hover {
+
+	background-color: #F8AB3F;
+}
+
+#introTag .btn-hid {
+/*  margin-left: 39px;
+*/  background-color: transparent;
+}
+
+#introTag .btn-hid:hover {
+
+	background-color: #F8AB3F;
+}
+
+#featured {
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+#featured ul {
+  list-style-type: none;
+}
+
+#featured ul li {
+  display: inline;
+}
+
+#featured ul li a {
+  text-decoration: none;
+}
+
+#featured_links li img {
+  margin: 10px;
+  padding: 10px;
+}
+
+#all_links ul {
+  list-style-type: none;
+}
+
+
+#all_links ul li {
+  display: inline;
+}
+
+#all_links ul li a {
+  text-decoration: none;
+}
+
+#all_link_list li img {
+  margin: 10px;
+  padding: 10px;
+}
+
+footer {
+  height: 250px;
+  width: 100%;
+  border-top: solid #ffffff 1px;
+
+}
+
+footer ul {
+  list-style-type: none;
+  margin-top: 5;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+footer ul li {
+  display: inline;
+  padding: 13px;
+  letter-spacing: 0.02em;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer h1 {
+  color: white;
+  padding-top: 20px;
+  font-size: 3em;
+  font-weight: 100;
+}
+
