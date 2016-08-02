@@ -7,3 +7,16 @@ $(function() {
     };
     $window.scroll(updateBackgroundPosition);
 });
+
+// CODE BELOW IS WORK-IN-PROGRESS TO GET RID OF JQUERY
+
+// document.addEventListener('DOMContentLoaded', function() {
+// 	var winEl = window;
+// 	var header = document.getElementById('banner')
+
+// 	    var updateBackgroundPosition = function(e) {
+// 	    	var scrollPosition = winEl.scrollTop;
+// 	    	header.style.backgroundPosition = "0px -" + (scrollPosition - 100) + "px";
+// 	    };
+// 	    // winEl.scroll(updateBackgroundPosition);
+// });

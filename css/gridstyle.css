@@ -14,7 +14,6 @@ body {
   background-repeat: repeat-x;
   background-position: 0px 0px;
   font-family: "Theinhardt-Regular";
-  max-width: none;
 }
 
 #top {
@@ -209,73 +208,23 @@ input:focus{
   bottom: 8px;
 }
 
-/* MAY DELETE THIS CODE SOON
-
-#introTag {
-  width: 83%;
-  margin-top: 250px;
-  overflow: auto;
-}
-
-#introTag h1 {
-  font-family: "Theinhardt-Regular";
-  font-weight: 900;
-  font-size: 4.1em;
-  color: white;
-  letter-spacing: 0.02em;
-  font-weight: 300;
-}
-
-#introTag button {
-  font-family: "Theinhardt-Regular";
-  -webkit-border-radius: 3;
-  -moz-border-radius: 3;
-  border-radius: 3px;
-  color: #ffffff;
-  font-size: 60px;
-  background: transparent;
-  padding: 5px 10px 5px 10px;
-  border: solid #ffffff 10px;
-  text-decoration: none;
-  margin-top: 20px;
-}
-
-#introTag button:hover {
-
-	background-color: #F8AB3F;
-}
-
-#introTag .btn-hid {
-/*  margin-left: 39px;
- background-color: transparent;
-}
-
-#introTag .btn-hid:hover {
-
-	background-color: #F8AB3F;
-}*/
-
-
-#featured {
+#featured-grid {
   margin: 0 auto;
-  margin-top: 200px;
+  width: 1000px;
+  margin-top: 250px;
+  list-style: none;
+  padding: 0;
+  z-index: -5;
 }
 
-#featured ul {
-  list-style-type: none;
-}
-
-#featured ul li {
+#featured-grid ul li {
   display: inline;
+  float: left;
 }
 
-#featured ul li a {
-  text-decoration: none;
-}
-
-#featured-links li img {
-  margin: 10px;
-  padding: 10px;
+#featured-grid img {
+  height: 250px;
+  width: 250px;
 }
 
 #all-links ul {

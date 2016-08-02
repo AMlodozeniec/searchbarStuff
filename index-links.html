@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wallplay</title>
+<meta name="author" content="Boogie">
+<meta name="description" content="description here">
+<meta name="keywords" content="keywords,here">
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script src="js/config.js" async></script>
+<script src="js/data.js" async></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/utils/Draggable.min.js" async></script> -->
+<script src="js/jquery-1.11.3.min.js"> </script>
+<script src="js/gradient-fade.js"></script>
+
+</head>
+
+<body onload="linksSetup();">
+    <header id="banner"><div id="header">
+    <div id="top">
+      <div class="col col-3"> <p> </p></div>
+      <div class="col col-6">
+        <p class="center">are you a brand or agency? <a href="#"> click here</a></p>
+      </div>
+    
+      <div class="col col-3 right-align">
+
+      <a href="#" class="login-button">login</a></div>
+    
+    </div>
+    
+      <nav> 
+        <div class="col col-3" id="post-future"><img src="assets/pflogo.png"></div>
+
+        <div class="col col-6 mx-auto">
+          <img src="assets/wallplay_logo.png" class="block mx-auto">
+          <ul class="main-nav-menu">
+            <li><a href="past.html">past</a></li>
+            <li><a href="present.html">present</a></li>
+            <li><a href="future.html">future</a></li>
+          </ul>
+        </div>
+        <div class="col col-3">
+
+          <ul id="side-nav-menu" class="right-align">
+            <li><a href="submit.html">submit</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="spaces.html">spaces</a></li>
+          </ul>
+
+          <!-- Search Bar --> 
+          <div id="search" class="right-align"><input type="text" name="search" placeholder="search: " id="search-bar" onMouseDown="active();" onBlur="inactive();" value="search:" />
+            <div class="hidden-submit"><input type="submit" tabindex="-1"/></div>
+            <button id="btn" onMouseDown="search();">Go</button>
+          </div>
+        </div>
+      </nav>
+  </header>  
+
+  <div id="togglebar" class="fixed left-0">
+  
+    <ul class="list-reset mx-auto">
+      <li><a href="index-links.html"><img src="assets/links-icon.png" width="66" height="66"></a></li>
+      <li><a href="index.html"><img src="assets/x-icon.png" width="66" height="66"></a></li>
+      <li><a href="index-grid.html"><img src="assets/box-icon.png" width="66" height="66"></a></li>
+  </ul>
+
+  </div>
+
+      <div id="search-div" style=display:none; class="col col-12">
+        <ul id="search-results">
+          
+        </ul>
+      </div>
+
+      <div id="featured" class="col col-12">
+
+        <ul id="featured-links">
+
+        </ul>
+      </div>
+
+      <div id="links-view-all-links" class="col col-12 mx-auto">
+
+        <ul id="list-view-link-list">
+        </ul>
+
+      </div>
+
+      <footer class="col col-12">
+<!--         <div class="col col-3"><img src="assets/logo.png"></div>
+ -->
+        <div class="col col-6 mx-auto" >
+          <ul class="main-nav-menu">
+            <li><a href="past.html">past</a></li>
+            <li><a href="present.html">present</a></li>
+            <li><a href="future.html">future</a></li>
+          </ul>
+
+          <img src="assets/wallplay_logo.png" class="block mx-auto">
+
+        </div>
+        
+      <div class="col col-3 right-align">
+
+      <a href="#" class="login-button">login</a>
+
+          <ul id="footer-side-nav-menu" class="right-align">
+            <li><a href="submit.html">submit</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="spaces.html">spaces</a></li>
+          </ul>
+
+        </div>
+      </footer>
+  </body>
+</html>

@@ -1,9 +1,9 @@
- // Initialize Firebase
+// Initialize Firebase
 var config = {
-    apiKey: "AIzaSyD2B5aiTIciTAu1qBH2AOGxc3p1MjVgY5s",
-    authDomain: "wallplaytestdatabase.firebaseapp.com",
-    databaseURL: "https://wallplaytestdatabase.firebaseio.com",
-    storageBucket: "wallplaytestdatabase.appspot.com",
+    apiKey: "AIzaSyCiLOzL7NP-vVOiJbjxrNhVTxBd-yKZfOE",
+    authDomain: "wallplay-a8440.firebaseapp.com",
+    databaseURL: "https://wallplay-a8440.firebaseio.com",
+    storageBucket: "wallplay-a8440.appspot.com",
   };
 
 firebase.initializeApp(config);
