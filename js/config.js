@@ -1,13 +1,11 @@
-// Initialize Firebase
+  // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyCiLOzL7NP-vVOiJbjxrNhVTxBd-yKZfOE",
-    authDomain: "wallplay-a8440.firebaseapp.com",
-    databaseURL: "https://wallplay-a8440.firebaseio.com",
-    storageBucket: "wallplay-a8440.appspot.com",
-  };
-
+	apiKey: "AIzaSyD2B5aiTIciTAu1qBH2AOGxc3p1MjVgY5s",
+	authDomain: "wallplaytestdatabase.firebaseapp.com",
+	databaseURL: "https://wallplaytestdatabase.firebaseio.com",
+	storageBucket: "wallplaytestdatabase.appspot.com",
+};
 firebase.initializeApp(config);
 
 // Get a reference to the database service  
-var database = firebase.database();
 console.log("firebase is up")
