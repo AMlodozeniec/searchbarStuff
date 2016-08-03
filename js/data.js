@@ -1,6 +1,6 @@
-var ref;
-var http;
+// Used as reference after item is searched for. Holds all data of searched item
 var store = {};
+var refId = 0;
 
 // Set up references
 var featuredRef = firebase.database().ref('featured/');
@@ -24,14 +24,12 @@ function homeSetup() {
 	getImages(spacesRef);
 }
 
-
 function homeGridSetup() {
 	getImages(featuredRef);
 	getImages(pastRef);
 	getImages(presentRef);
 	getImages(futureRef);
 }
-
 
 function pastSetup() {
 	getImages(pastRef);
@@ -55,11 +53,10 @@ function linksSetup() {
 	getLinks(presentRef);
 	getLinks(futureRef);
 	getLinks(spacesRef);
-
 }
 
 function getImages(ref){
-	console.log(ref.toString());
+	// console.log(ref.toString());
 	if(ref.toString() == featuredRef.toString()){
 		addFeaturedImages();
 	}
@@ -86,6 +83,7 @@ function getImages(ref){
 
 function addImages(ref){
 	ref.on("child_added", function(snapshot) {
+		// console.log('snapshot is ' + snapshot.val().mainImgUrl);
 		var links = snapshot.val().mainImgUrl;
 		var li = document.createElement("li");
 		var img = document.createElement("img");
@@ -123,7 +121,6 @@ function addSpaceImages(){
 	});
 }
 
-
 function getLinks(ref){
 	ref.on("child_added", function(snapshot) {
 		var links = snapshot.val().mainImgUrl;
@@ -151,7 +148,6 @@ function active(){
 }
 
 function inactive(){
-
 	if(searchBar.value == "search:"){
 		searchBar.value = "search:";
 		searchBar.placeholder = "";
@@ -180,10 +176,10 @@ function setupIndex(index){
 	//Create index of all keywords that can be searched for
 	// var index = createLunrIndex();
 	index = addToIndex(featuredRef, index);
-	// index = addToIndex(pastRef, index);
-	// index = addToIndex(presentRef, index);
-	// index = addToIndex(futureRef, index);
-	// index = addToIndex(spacesRef, index);
+	index = addToIndex(pastRef, index);
+	index = addToIndex(presentRef, index);
+	index = addToIndex(futureRef, index);
+	index = addToIndex(spacesRef, index);
 
 	var savedIndex = index.toJSON();
 
@@ -194,12 +190,15 @@ function setupIndex(index){
 function addToIndex(ref, index){
 	ref.on("child_added", function(snapshot){
 		var doc = {
-			'name': snapshot.key, //name is the id
+			// 'name': snapshot.key, //name is the id
+			'name': refId,
 			'artist': snapshot.val().artist,
 			'author': snapshot.val().author,
 			'projectTitle': snapshot.val().projectTitle,
 			'text': snapshot.val().text
 		};
+		// console.log('refId is ' + refId);
+		refId++;
 
 		//store[] is global, so it's seen everywhere. Used to keep track of more info of document than index
 		store[doc.name] = { 
@@ -244,19 +243,23 @@ function search(){
 
 			for(var item in results){
 				var ref = results[item].ref; //This allows code to properly access items inside the store dictionary
-				console.log('results is '+ ref);
+				console.log('result id is '+ ref);
 
-				var li = document.createElement("li");
-				var a = document.createElement("a");
-				var img = document.createElement("img");
-				a.setAttribute("href", store[ref].projectUrl);
-				img.setAttribute("src" , store[ref].mainImgUrl);
-				a.appendChild(img);
-				li.appendChild(a);
-				feat_ul.appendChild(li);
+				addSearchImage(ref);
 			}
 		}
 	}
+}
+
+function addSearchImage(ref){
+	var li = document.createElement("li");
+	var a = document.createElement("a");
+	var img = document.createElement("img");
+	a.setAttribute("href", store[ref].projectUrl);
+	img.setAttribute("src" , store[ref].mainImgUrl);
+	a.appendChild(img);
+	li.appendChild(a);
+	feat_ul.appendChild(li);
 }
 
 //Deletes all content inside a div. Basically a copy of jQuery's $().empty function
